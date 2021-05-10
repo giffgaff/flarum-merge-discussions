@@ -14,6 +14,7 @@ namespace FoF\MergeDiscussions\Api\Controllers;
 use Flarum\Api\Controller\AbstractShowController;
 use Flarum\Api\Serializer\DiscussionSerializer;
 use FoF\MergeDiscussions\Api\Commands\MergeDiscussion;
+use FoF\MergeDiscussions\Jobs\MergeDiscussionJob;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\Arr;
 use Psr\Http\Message\ServerRequestInterface;
@@ -55,8 +56,10 @@ class MergeController extends AbstractShowController
         $discussion = Arr::get($request->getQueryParams(), 'id');
         $ids = Arr::get($request->getParsedBody(), 'ids');
 
-        return $this->bus->dispatch(
-            new MergeDiscussion($actor, $discussion, $ids)
+        app('flarum.queue.connection')->push(
+            new MergeDiscussionJob(new MergeDiscussion($actor, $discussion, $ids))
         );
+
+        return $discussion;
     }
 }

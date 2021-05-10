@@ -40,4 +40,9 @@ return [
         ->attribute('canMerge', function (DiscussionSerializer $serializer, AbstractModel $discussion) {
             return $serializer->getActor()->can('merge', $discussion);
         }),
+
+    (new Extend\Notification())
+        ->type(Notifications\MergeStartedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
+        ->type(Notifications\MergeFinishedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
+        ->type(Notifications\MergeFailedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
 ];
