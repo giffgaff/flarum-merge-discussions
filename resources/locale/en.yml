@@ -20,8 +20,11 @@ fof-merge-discussions:
 
     notifications:
         merge_started: "Discussion merge started"
+        merge_started_label: "Discussion merge started"
         merge_finished: "Discussion merge finished"
+        merge_finished_label: "Discussion merge finished"
         merge_failed: "Discussion merge failed"
+        merge_failed_label: "Discussion merge failed"
   admin:
     permissions:
       merge_discussions_label: Merge discussions
