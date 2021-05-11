@@ -44,5 +44,8 @@ return [
     (new Extend\Notification())
         ->type(Notifications\MergeStartedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
         ->type(Notifications\MergeFinishedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
-        ->type(Notifications\MergeFailedBlueprint::class, DiscussionSerializer::class, ['alert', 'email'])
+        ->type(Notifications\MergeFailedBlueprint::class, DiscussionSerializer::class, ['alert', 'email']),
+
+    (new Extend\View())
+        ->namespace('fof-merge-discussions', __DIR__.'/resources/views')
 ];

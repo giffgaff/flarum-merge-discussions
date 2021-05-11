@@ -18,6 +18,10 @@ fof-merge-discussions:
     post:
       merged: Merged <b>{count}</b> post from {titles}.|Merged <b>{count}</b> posts from {titles}.
 
+    notifications:
+        merge_started: "Discussion merge started"
+        merge_finished: "Discussion merge finished"
+        merge_failed: "Discussion merge failed"
   admin:
     permissions:
       merge_discussions_label: Merge discussions

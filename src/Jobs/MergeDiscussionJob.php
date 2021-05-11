@@ -22,7 +22,7 @@ class MergeDiscussionJob implements ShouldQueue
     public function handle(Dispatcher $bus, NotificationSyncer $notifications)
     {
         if ($this->mergeDiscussionCommand->merge) {
-            $notifications->sync(new MergeStartedBlueprint($this->mergeDiscussionCommand), [$this->mergeDiscussionCommand->actor->id]);
+            $notifications->sync(new MergeStartedBlueprint($this->mergeDiscussionCommand), [$this->mergeDiscussionCommand->actor]);
         }
 
         try {
@@ -30,12 +30,12 @@ class MergeDiscussionJob implements ShouldQueue
         }
         catch (\Exception $e) {
             if ($this->mergeDiscussionCommand->merge) {
-                $notifications->sync(new MergeFailedBlueprint($this->mergeDiscussionCommand, $e), [$this->mergeDiscussionCommand->actor->id]);
+                $notifications->sync(new MergeFailedBlueprint($this->mergeDiscussionCommand, $e), [$this->mergeDiscussionCommand->actor]);
             }
         }
 
         if ($this->mergeDiscussionCommand->merge) {
-            $notifications->sync(new MergeFinishedBlueprint($this->mergeDiscussionCommand), [$this->mergeDiscussionCommand->actor->id]);
+            $notifications->sync(new MergeFinishedBlueprint($this->mergeDiscussionCommand), [$this->mergeDiscussionCommand->actor]);
         }
     }
 }
