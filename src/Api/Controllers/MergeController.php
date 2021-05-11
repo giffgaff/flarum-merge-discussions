@@ -13,6 +13,7 @@ namespace FoF\MergeDiscussions\Api\Controllers;
 
 use Flarum\Api\Controller\AbstractShowController;
 use Flarum\Api\Serializer\DiscussionSerializer;
+use Flarum\Discussion\Discussion;
 use FoF\MergeDiscussions\Api\Commands\MergeDiscussion;
 use FoF\MergeDiscussions\Jobs\MergeDiscussionJob;
 use Illuminate\Contracts\Bus\Dispatcher;
@@ -60,6 +61,6 @@ class MergeController extends AbstractShowController
             new MergeDiscussionJob(new MergeDiscussion($actor, $discussion, $ids))
         );
 
-        return $discussion;
+        return Discussion::query()->findOrFail($discussion);
     }
 }

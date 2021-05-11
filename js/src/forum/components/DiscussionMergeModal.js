@@ -179,25 +179,14 @@ export default class DiscussionMergeModal extends Modal {
         return app
             .request(this.getRequestData())
             .then(async () => {
-                if (app.current.matches(DiscussionPage)) {
-                    if (this.type() === 'target') {
-                        await app.current.refresh();
+              app.modal.close();
 
-                        app.current.stream.update();
-                    } else {
-                        m.route.set(app.route.discussion(this.merging[0]));
-                    }
-                }
-
-                if (this.type() === 'target') {
-                    this.merging.forEach((d) => app.discussions.removeDiscussion(d));
-                } else {
-                    app.discussions.removeDiscussion(this.discussion);
-                }
-
-                m.redraw();
-
-                app.modal.close();
+              app.alerts.show(
+                {
+                  type: 'success'
+                },
+                app.translator.trans('fof-merge-discussions.forum.alert.merge_started')
+              );
             })
             .catch(() => {})
             .then(this.loaded.bind(this));

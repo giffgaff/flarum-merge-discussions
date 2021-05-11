@@ -12,6 +12,9 @@ fof-merge-discussions:
       load_preview_button: Preview
       submit_button: => fof-merge-discussions.ref.merge
 
+    alert:
+      merge_started: "Your discussion merge has been started. Please check your notifications for status updates."
+
     discussion:
       merge: => fof-merge-discussions.ref.merge
 
@@ -40,18 +43,21 @@ fof-merge-discussions:
 
         The following discussion ids are going to be merged into {discussion_url}.
 
+        Discussion ids being merged:
         {merge_discussions}
       merge_finished: |
         Hey {actor_display_name},
 
         The following discussion ids have been merged into {discussion_url}.
 
+        Discussion ids being merged:
         {merge_discussions}
       merge_failed: |
         Hey {actor_display_name},
 
         Merging the following discussion ids into {discussion_url} has failed.
 
+        Discussion ids being merged:
         {merge_discussions}
 
         The following is the reason (may be useful to pass on to developers).
