@@ -181,7 +181,7 @@ export default class DiscussionMergeModal extends Modal {
             .then(async () => {
                 if (app.current.matches(DiscussionPage)) {
                     if (this.type() === 'target') {
-                        await app.current.refresh();
+                        await app.current.reset();
 
                         app.current.stream.update();
                     } else {

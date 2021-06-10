@@ -1,2 +1,1613 @@
-module.exports=function(t){var e={};function r(n){if(e[n])return e[n].exports;var o=e[n]={i:n,l:!1,exports:{}};return t[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)r.d(n,o,function(e){return t[e]}.bind(null,o));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s=18)}([function(t,e){t.exports=flarum.core.compat["components/Button"]},,function(t,e,r){t.exports=r(17)},function(t,e){t.exports=flarum.core.compat["helpers/highlight"]},function(t,e){t.exports=flarum.core.compat.extend},function(t,e){t.exports=flarum.core.compat.Model},function(t,e){t.exports=flarum.core.compat["utils/DiscussionControls"]},function(t,e){t.exports=flarum.core.compat["components/DiscussionPage"]},function(t,e){t.exports=flarum.core.compat["components/Modal"]},function(t,e){t.exports=flarum.core.compat["components/PostStream"]},function(t,e){t.exports=flarum.core.compat["states/PostStreamState"]},function(t,e){t.exports=flarum.core.compat["states/GlobalSearchState"]},function(t,e){t.exports=flarum.core.compat["utils/Stream"]},function(t,e){t.exports=flarum.core.compat["components/Search"]},function(t,e){t.exports=flarum.core.compat["utils/ItemList"]},function(t,e){t.exports=flarum.core.compat["components/EventPost"]},function(t,e){t.exports=flarum.core.compat["helpers/punctuateSeries"]},function(t,e,r){var n=function(t){"use strict";var e=Object.prototype,r=e.hasOwnProperty,n="function"==typeof Symbol?Symbol:{},o=n.iterator||"@@iterator",i=n.asyncIterator||"@@asyncIterator",s=n.toStringTag||"@@toStringTag";function a(t,e,r,n){var o=e&&e.prototype instanceof l?e:l,i=Object.create(o.prototype),s=new _(n||[]);return i._invoke=function(t,e,r){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return N()}for(r.method=o,r.arg=i;;){var s=r.delegate;if(s){var a=w(s,r);if(a){if(a===u)continue;return a}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var l=c(t,e,r);if("normal"===l.type){if(n=r.done?"completed":"suspendedYield",l.arg===u)continue;return{value:l.arg,done:r.done}}"throw"===l.type&&(n="completed",r.method="throw",r.arg=l.arg)}}}(t,r,s),i}function c(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=a;var u={};function l(){}function p(){}function f(){}var h={};h[o]=function(){return this};var d=Object.getPrototypeOf,m=d&&d(d(L([])));m&&m!==e&&r.call(m,o)&&(h=m);var g=f.prototype=l.prototype=Object.create(h);function v(t){["next","throw","return"].forEach((function(e){t[e]=function(t){return this._invoke(e,t)}}))}function y(t){var e;this._invoke=function(n,o){function i(){return new Promise((function(e,i){!function e(n,o,i,s){var a=c(t[n],t,o);if("throw"!==a.type){var u=a.arg,l=u.value;return l&&"object"==typeof l&&r.call(l,"__await")?Promise.resolve(l.__await).then((function(t){e("next",t,i,s)}),(function(t){e("throw",t,i,s)})):Promise.resolve(l).then((function(t){u.value=t,i(u)}),(function(t){return e("throw",t,i,s)}))}s(a.arg)}(n,o,e,i)}))}return e=e?e.then(i,i):i()}}function w(t,e){var r=t.iterator[e.method];if(void 0===r){if(e.delegate=null,"throw"===e.method){if(t.iterator.return&&(e.method="return",e.arg=void 0,w(t,e),"throw"===e.method))return u;e.method="throw",e.arg=new TypeError("The iterator does not provide a 'throw' method")}return u}var n=c(r,t.iterator,e.arg);if("throw"===n.type)return e.method="throw",e.arg=n.arg,e.delegate=null,u;var o=n.arg;return o?o.done?(e[t.resultName]=o.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,u):o:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,u)}function b(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function x(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function _(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(b,this),this.reset(!0)}function L(t){if(t){var e=t[o];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,i=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return i.next=i}}return{next:N}}function N(){return{value:void 0,done:!0}}return p.prototype=g.constructor=f,f.constructor=p,f[s]=p.displayName="GeneratorFunction",t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===p||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,f):(t.__proto__=f,s in t||(t[s]="GeneratorFunction")),t.prototype=Object.create(g),t},t.awrap=function(t){return{__await:t}},v(y.prototype),y.prototype[i]=function(){return this},t.AsyncIterator=y,t.async=function(e,r,n,o){var i=new y(a(e,r,n,o));return t.isGeneratorFunction(r)?i:i.next().then((function(t){return t.done?t.value:i.next()}))},v(g),g[s]="Generator",g[o]=function(){return this},g.toString=function(){return"[object Generator]"},t.keys=function(t){var e=[];for(var r in t)e.push(r);return e.reverse(),function r(){for(;e.length;){var n=e.pop();if(n in t)return r.value=n,r.done=!1,r}return r.done=!0,r}},t.values=L,_.prototype={constructor:_,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(x),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return s.type="throw",s.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],s=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var a=r.call(i,"catchLoc"),c=r.call(i,"finallyLoc");if(a&&c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(a){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var s=i?i.completion:{};return s.type=t,s.arg=e,i?(this.method="next",this.next=i.finallyLoc,u):this.complete(s)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),u},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),x(r),u}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;x(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:L(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),u}},t}(t.exports);try{regeneratorRuntime=n}catch(t){Function("r","regeneratorRuntime = r")(n)}},function(t,e,r){"use strict";r.r(e);var n=r(4),o=r(5),i=r.n(o),s=r(6),a=r.n(s),c=r(0),u=r.n(c),l=r(2),p=r.n(l);function f(t,e,r,n,o,i,s){try{var a=t[i](s),c=a.value}catch(t){return void r(t)}a.done?e(c):Promise.resolve(c).then(n,o)}function h(t){return function(){var e=this,r=arguments;return new Promise((function(n,o){var i=t.apply(e,r);function s(t){f(i,n,o,s,a,"next",t)}function a(t){f(i,n,o,s,a,"throw",t)}s(void 0)}))}}function d(t,e){t.prototype=Object.create(e.prototype),t.prototype.constructor=t,t.__proto__=e}var g=r(7),v=r.n(g),y=r(8),w=r.n(y),b=r(9),x=r.n(b),_=r(10),L=r.n(_),N=r(11),E=r.n(N),S=r(12),P=r.n(S),O=r(13),j=r.n(O),k=r(14),D=r.n(k),M=r(3),F=r.n(M),T=function(){function t(t,e){this.results={},this.onSelect=t,this.ignore=e}var e=t.prototype;return e.search=function(t){var e=this;t=t.toLowerCase(),this.results[t]=[];var r={filter:{q:t},page:{limit:4}},n=Number(t);return Number.isNaN(n)||n===this.ignore?app.store.find("discussions",r).then((function(r){e.results[t]=r.filter((function(t){return t.id()!==e.ignore}))})):app.store.find("discussions",n).then((function(r){e.results[t]=[r]})).catch((function(){return[]}))},e.view=function(t){var e=this;return t=t.toLowerCase(),[(this.results[t]||[]).map((function(r){return m("li",{className:"DiscussionSearchResult","data-index":"discussions"+r.id()},m("a",{onclick:function(){return e.onSelect(r)}},m("div",{className:"DiscussionSearchResult-title"},m("i",null,F()(r.id(),t))," ~ ",F()(r.title(),t))))}))]},t}(),G=function(t){function e(){return t.apply(this,arguments)||this}d(e,t);var r=e.prototype;return r.view=function(){this.hasFocus=!0;var e=t.prototype.view.call(this);return e.attrs.className="MergeDiscussions-Search "+(this.state.getValue()&&"open")+" "+e.attrs.className.replace(/(focused|open)/g,""),e},r.sourceItems=function(){var t=new D.a;return t.add("discussions",new T(this.attrs.onSelect,this.attrs.ignore)),t},e}(j.a),B=function(t){function e(){return t.apply(this,arguments)||this}d(e,t);var r=e.prototype;return r.oninit=function(e){t.prototype.oninit.call(this,e),this.discussion=this.attrs.discussion,this.type=P()("target"),this.merging=[],this.results=[],this.preview=null,this.loadingPreview=!1,this.search=new E.a},r.title=function(){return app.translator.trans("fof-merge-discussions.forum.modal.title")},r.className=function(){return"FoFMergeDiscussionsModal Modal--large"},r.content=function(){var t=this;return m("div",{className:"Modal-body"},m("div",{className:"Form"},m("div",{className:"Form-group"},["target","from"].map((function(e){return m("div",null,m("input",{type:"radio",id:"type_"+e,checked:t.type()===e,onclick:t.changeType.bind(t,e)})," ",m("label",{htmlFor:"type_"+e},app.translator.trans("fof-merge-discussions.forum.modal.type_"+e+"_label")))}))),m("p",{className:"help"},app.translator.trans("fof-merge-discussions.forum.modal.type_"+this.type()+"_help_text",{title:this.discussion.title()})),!this.disabled()&&m("div",{className:"Form-group"},G.component({state:this.search,onSelect:this.select.bind(this),ignore:this.discussion.id()})),m("div",{className:"Form-group MergeDiscussions-Discussions"},m("ul",null,this.merging.map((function(e){return m("li",null,m("i",{className:"fas fa-trash DeleteEntry-Button",onclick:function(){return t.remove(e)}})," ",m("a",{href:app.forum.attribute("baseUrl")+"/d/"+e.id(),target:"_blank"},m("i",null,e.id())," ~ ",e.title()))})))),m("div",{className:"Form-group MergeDiscussions-Preview"},u.a.component({className:"Button Button--danger",onclick:this.loadPreview.bind(this),loading:this.loadingPreview,disabled:!this.discussion||!this.merging.length},app.translator.trans("fof-merge-discussions.forum.modal.load_preview_button")),this.preview&&m("div",{className:"MergeDiscussions-PostStream"},m("div",{className:"Hero"},m("h2",null,"target"===this.type()?this.discussion.title():this.merging[0].title())),m(x.a,{stream:this.preview,discussion:this.preview.discussion}))),m("div",{className:"Form-group"},u.a.component({className:"Button Button--primary Button--block",type:"submit",onclick:this.submit.bind(this),loading:this.loading,disabled:!this.discussion||!this.merging.length},app.translator.trans("fof-merge-discussions.forum.modal.submit_button")))))},r.disabled=function(){return"from"===this.type()&&0!==this.merging.length},r.select=function(t){t&&t.id()===this.discussion.id()||this.merging.includes(t)||this.disabled()||(this.merging.push(t),delete this.preview)},r.remove=function(t){delete this.preview,this.merging.splice(this.merging.indexOf(this.merging.filter((function(e){return e.id()===t.id()}))[0]),1)},r.changeType=function(t){this.type(t),this.merging.length>1&&(this.merging=[])},r.loadPreview=function(){var t=this;return this.loadingPreview=!0,app.request(this.getRequestData("GET")).then((function(e){var r=1;e.included&&e.included.map(app.store.pushObject.bind(app.store)),e.data.relationships.posts.data.map((function(t){return app.store.getById("posts",t.id)})).sort((function(t,e){return t.createdAt()-e.createdAt()})).forEach((function(t,n){t.number(r++),e.data.relationships.posts.data[n]={type:"posts",id:t.id()}}));var n=app.store.createRecord(e.data.type,e.data);n.payload=e,t.loadingPreview=!1;var o=n.posts();t.preview=new L.a(n,o),m.redraw()})).catch((function(){return t.loadingPreview=!1}))},r.submit=function(t){var e=this;return t.preventDefault(),this.loading=!0,app.request(this.getRequestData()).then(h(p.a.mark((function t(){return p.a.wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(!app.current.matches(v.a)){t.next=8;break}if("target"!==e.type()){t.next=7;break}return t.next=4,app.current.refresh();case 4:app.current.stream.update(),t.next=8;break;case 7:m.route.set(app.route.discussion(e.merging[0]));case 8:"target"===e.type()?e.merging.forEach((function(t){return app.discussions.removeDiscussion(t)})):app.discussions.removeDiscussion(e.discussion),m.redraw(),app.modal.close();case 11:case"end":return t.stop()}}),t)})))).catch((function(){})).then(this.loaded.bind(this))},r.getRequestData=function(t){void 0===t&&(t="POST");var e="target"===this.type(),r=e?this.discussion.apiEndpoint():this.merging[0].apiEndpoint(),n=e?this.merging.map((function(t){return t.id()})):this.discussion.id();return{method:t,url:""+app.forum.attribute("apiUrl")+r+"/merge",params:{ids:n},body:{ids:n},errorHandler:this.onerror.bind(this)}},e}(w.a),R=r(15),q=r.n(R),A=r(16),I=r.n(A),C=function(t){function e(){return t.apply(this,arguments)||this}d(e,t);var r=e.prototype;return r.icon=function(){return"fas fa-code-branch fa-flip-vertical"},r.descriptionKey=function(){return"fof-merge-discussions.forum.post.merged"},r.descriptionData=function(){var t=this.attrs.post.content();return Array.isArray(t.titles)&&(t.titles=I()(t.titles).join("")),t},e}(q.a);app.initializers.add("fof/merge-discussions",(function(){app.store.models.discussions.prototype.canMerge=i.a.attribute("canMerge"),app.postComponents.discussionMerged=C,Object(n.extend)(a.a,"moderationControls",(function(t,e){e.canMerge()&&t.add("fof-merge",u.a.component({icon:"fas fa-code-branch fa-flip-vertical",onclick:function(){return app.modal.show(B,{discussion:e})}},app.translator.trans("fof-merge-discussions.forum.discussion.merge")))}))}))}]);
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./forum.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./forum.js":
+/*!******************!*\
+  !*** ./forum.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/forum */ "./src/forum/index.js");
+/* empty/unused harmony star reexport */
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _asyncToGenerator; });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
+/***/ "./src/forum/components/DiscussionMergeModal.js":
+/*!******************************************************!*\
+  !*** ./src/forum/components/DiscussionMergeModal.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DiscussionMergeModal; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/DiscussionPage */ "flarum/components/DiscussionPage");
+/* harmony import */ var flarum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! flarum/components/Button */ "flarum/components/Button");
+/* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Button__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var flarum_components_Modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! flarum/components/Modal */ "flarum/components/Modal");
+/* harmony import */ var flarum_components_Modal__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Modal__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var flarum_components_PostStream__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! flarum/components/PostStream */ "flarum/components/PostStream");
+/* harmony import */ var flarum_components_PostStream__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(flarum_components_PostStream__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var flarum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! flarum/states/PostStreamState */ "flarum/states/PostStreamState");
+/* harmony import */ var flarum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(flarum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var flarum_states_GlobalSearchState__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! flarum/states/GlobalSearchState */ "flarum/states/GlobalSearchState");
+/* harmony import */ var flarum_states_GlobalSearchState__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(flarum_states_GlobalSearchState__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var flarum_utils_Stream__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! flarum/utils/Stream */ "flarum/utils/Stream");
+/* harmony import */ var flarum_utils_Stream__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(flarum_utils_Stream__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _DiscussionSearch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./DiscussionSearch */ "./src/forum/components/DiscussionSearch.js");
+
+
+
+
+
+
+
+
+
+
+
+
+var DiscussionMergeModal =
+/*#__PURE__*/
+function (_Modal) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(DiscussionMergeModal, _Modal);
+
+  function DiscussionMergeModal() {
+    return _Modal.apply(this, arguments) || this;
+  }
+
+  var _proto = DiscussionMergeModal.prototype;
+
+  _proto.oninit = function oninit(vnode) {
+    _Modal.prototype.oninit.call(this, vnode);
+
+    this.discussion = this.attrs.discussion;
+    this.type = flarum_utils_Stream__WEBPACK_IMPORTED_MODULE_9___default()('target');
+    this.merging = [];
+    this.results = [];
+    this.preview = null;
+    this.loadingPreview = false;
+    this.search = new flarum_states_GlobalSearchState__WEBPACK_IMPORTED_MODULE_8___default.a();
+  };
+
+  _proto.title = function title() {
+    return app.translator.trans('fof-merge-discussions.forum.modal.title');
+  };
+
+  _proto.className = function className() {
+    return 'FoFMergeDiscussionsModal Modal--large';
+  };
+
+  _proto.content = function content() {
+    var _this = this;
+
+    return m("div", {
+      className: "Modal-body"
+    }, m("div", {
+      className: "Form"
+    }, m("div", {
+      className: "Form-group"
+    }, ['target', 'from'].map(function (key) {
+      return m("div", null, m("input", {
+        type: "radio",
+        id: "type_" + key,
+        checked: _this.type() === key,
+        onclick: _this.changeType.bind(_this, key)
+      }), "\xA0", m("label", {
+        htmlFor: "type_" + key
+      }, app.translator.trans("fof-merge-discussions.forum.modal.type_" + key + "_label")));
+    })), m("p", {
+      className: "help"
+    }, app.translator.trans("fof-merge-discussions.forum.modal.type_" + this.type() + "_help_text", {
+      title: this.discussion.title()
+    })), !this.disabled() && m("div", {
+      className: "Form-group"
+    }, _DiscussionSearch__WEBPACK_IMPORTED_MODULE_10__["default"].component({
+      state: this.search,
+      onSelect: this.select.bind(this),
+      ignore: this.discussion.id()
+    })), m("div", {
+      className: "Form-group MergeDiscussions-Discussions"
+    }, m("ul", null, this.merging.map(function (d) {
+      return m("li", null, m("i", {
+        className: "fas fa-trash DeleteEntry-Button",
+        onclick: function onclick() {
+          return _this.remove(d);
+        }
+      }), "\xA0", m("a", {
+        href: app.forum.attribute('baseUrl') + "/d/" + d.id(),
+        target: "_blank"
+      }, m("i", null, d.id()), " ~ ", d.title()));
+    }))), m("div", {
+      className: "Form-group MergeDiscussions-Preview"
+    }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_4___default.a.component({
+      className: 'Button Button--danger',
+      onclick: this.loadPreview.bind(this),
+      loading: this.loadingPreview,
+      disabled: !this.discussion || !this.merging.length
+    }, app.translator.trans('fof-merge-discussions.forum.modal.load_preview_button')), this.preview && m("div", {
+      className: "MergeDiscussions-PostStream"
+    }, m("div", {
+      className: "Hero"
+    }, m("h2", null, this.type() === 'target' ? this.discussion.title() : this.merging[0].title())), m(flarum_components_PostStream__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      stream: this.preview,
+      discussion: this.preview.discussion
+    }))), m("div", {
+      className: "Form-group"
+    }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_4___default.a.component({
+      className: 'Button Button--primary Button--block',
+      type: 'submit',
+      onclick: this.submit.bind(this),
+      loading: this.loading,
+      disabled: !this.discussion || !this.merging.length
+    }, app.translator.trans('fof-merge-discussions.forum.modal.submit_button')))));
+  };
+
+  _proto.disabled = function disabled() {
+    return this.type() === 'from' && this.merging.length !== 0;
+  };
+
+  _proto.select = function select(discussion) {
+    if (discussion && discussion.id() === this.discussion.id()) return;
+
+    if (!this.merging.includes(discussion) && !this.disabled()) {
+      this.merging.push(discussion);
+      delete this.preview;
+    }
+  };
+
+  _proto.remove = function remove(discussion) {
+    delete this.preview;
+    this.merging.splice(this.merging.indexOf(this.merging.filter(function (d) {
+      return d.id() === discussion.id();
+    })[0]), 1);
+  };
+
+  _proto.changeType = function changeType(key) {
+    this.type(key);
+    if (this.merging.length > 1) this.merging = [];
+  };
+
+  _proto.loadPreview = function loadPreview() {
+    var _this2 = this;
+
+    this.loadingPreview = true;
+    return app.request(this.getRequestData('GET')).then(function (payload) {
+      var number = 1;
+      if (payload.included) payload.included.map(app.store.pushObject.bind(app.store));
+      payload.data.relationships.posts.data.map(function (record) {
+        return app.store.getById('posts', record.id);
+      }).sort(function (a, b) {
+        return a.createdAt() - b.createdAt();
+      }).forEach(function (p, i) {
+        p.number(number++);
+        payload.data.relationships.posts.data[i] = {
+          type: 'posts',
+          id: p.id()
+        };
+      });
+      var discussion = app.store.createRecord(payload.data.type, payload.data);
+      discussion.payload = payload;
+      _this2.loadingPreview = false;
+      var includedPosts = discussion.posts();
+      _this2.preview = new flarum_states_PostStreamState__WEBPACK_IMPORTED_MODULE_7___default.a(discussion, includedPosts);
+      m.redraw();
+    }).catch(function () {
+      return _this2.loadingPreview = false;
+    });
+  };
+
+  _proto.submit = function submit(e) {
+    var _this3 = this;
+
+    e.preventDefault();
+    this.loading = true;
+    return app.request(this.getRequestData()).then(
+    /*#__PURE__*/
+    Object(_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (!app.current.matches(flarum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_3___default.a)) {
+                _context.next = 12;
+                break;
+              }
+
+              console.log(app.current);
+              console.log(app.current.refresh);
+              console.log(app.current.reset);
+              console.log(app.current.data);
+
+              if (!(_this3.type() === 'target')) {
+                _context.next = 11;
+                break;
+              }
+
+              _context.next = 8;
+              return app.current.reset();
+
+            case 8:
+              app.current.stream.update();
+              _context.next = 12;
+              break;
+
+            case 11:
+              m.route.set(app.route.discussion(_this3.merging[0]));
+
+            case 12:
+              if (_this3.type() === 'target') {
+                _this3.merging.forEach(function (d) {
+                  return app.discussions.removeDiscussion(d);
+                });
+              } else {
+                app.discussions.removeDiscussion(_this3.discussion);
+              }
+
+              m.redraw();
+              app.modal.close();
+
+            case 15:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))).catch(function () {}).then(this.loaded.bind(this));
+  };
+
+  _proto.getRequestData = function getRequestData(method) {
+    if (method === void 0) {
+      method = 'POST';
+    }
+
+    var isTarget = this.type() === 'target';
+    var endpoint = isTarget ? this.discussion.apiEndpoint() : this.merging[0].apiEndpoint();
+    var merging = isTarget ? this.merging.map(function (d) {
+      return d.id();
+    }) : this.discussion.id();
+    return {
+      method: method,
+      url: "" + app.forum.attribute('apiUrl') + endpoint + "/merge",
+      params: {
+        ids: merging
+      },
+      body: {
+        ids: merging
+      },
+      errorHandler: this.onerror.bind(this)
+    };
+  };
+
+  return DiscussionMergeModal;
+}(flarum_components_Modal__WEBPACK_IMPORTED_MODULE_5___default.a);
+
+
+
+/***/ }),
+
+/***/ "./src/forum/components/DiscussionMergePost.js":
+/*!*****************************************************!*\
+  !*** ./src/forum/components/DiscussionMergePost.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DiscussionMergePost; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_components_EventPost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/components/EventPost */ "flarum/components/EventPost");
+/* harmony import */ var flarum_components_EventPost__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_components_EventPost__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_helpers_punctuateSeries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/helpers/punctuateSeries */ "flarum/helpers/punctuateSeries");
+/* harmony import */ var flarum_helpers_punctuateSeries__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_helpers_punctuateSeries__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var DiscussionMergePost =
+/*#__PURE__*/
+function (_EventPost) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(DiscussionMergePost, _EventPost);
+
+  function DiscussionMergePost() {
+    return _EventPost.apply(this, arguments) || this;
+  }
+
+  var _proto = DiscussionMergePost.prototype;
+
+  /**
+   * Get the name of the event icon.
+   *
+   * @return {String}
+   */
+  _proto.icon = function icon() {
+    return 'fas fa-code-branch fa-flip-vertical';
+  }
+  /**
+   * Get the translation key for the description of the event.
+   *
+   * @return {String}
+   */
+  ;
+
+  _proto.descriptionKey = function descriptionKey() {
+    return 'fof-merge-discussions.forum.post.merged';
+  }
+  /**
+   * Get the translation data for the description of the event.
+   *
+   * @return {Object}
+   */
+  ;
+
+  _proto.descriptionData = function descriptionData() {
+    var data = this.attrs.post.content();
+    if (Array.isArray(data.titles)) data.titles = flarum_helpers_punctuateSeries__WEBPACK_IMPORTED_MODULE_2___default()(data.titles).join('');
+    return data;
+  };
+
+  return DiscussionMergePost;
+}(flarum_components_EventPost__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+
+
+/***/ }),
+
+/***/ "./src/forum/components/DiscussionSearch.js":
+/*!**************************************************!*\
+  !*** ./src/forum/components/DiscussionSearch.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DiscussionSearch; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_components_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/components/Search */ "flarum/components/Search");
+/* harmony import */ var flarum_components_Search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Search__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_utils_ItemList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/utils/ItemList */ "flarum/utils/ItemList");
+/* harmony import */ var flarum_utils_ItemList__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_utils_ItemList__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _DiscussionSearchSource__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DiscussionSearchSource */ "./src/forum/components/DiscussionSearchSource.js");
+
+
+
+
+
+var DiscussionSearch =
+/*#__PURE__*/
+function (_Search) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(DiscussionSearch, _Search);
+
+  function DiscussionSearch() {
+    return _Search.apply(this, arguments) || this;
+  }
+
+  var _proto = DiscussionSearch.prototype;
+
+  _proto.view = function view() {
+    this.hasFocus = true;
+
+    var vdom = _Search.prototype.view.call(this);
+
+    vdom.attrs.className = "MergeDiscussions-Search " + (this.state.getValue() && 'open') + " " + vdom.attrs.className.replace(/(focused|open)/g, '');
+    return vdom;
+  };
+
+  _proto.sourceItems = function sourceItems() {
+    var items = new flarum_utils_ItemList__WEBPACK_IMPORTED_MODULE_2___default.a();
+    items.add('discussions', new _DiscussionSearchSource__WEBPACK_IMPORTED_MODULE_3__["default"](this.attrs.onSelect, this.attrs.ignore));
+    return items;
+  };
+
+  return DiscussionSearch;
+}(flarum_components_Search__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+
+
+/***/ }),
+
+/***/ "./src/forum/components/DiscussionSearchSource.js":
+/*!********************************************************!*\
+  !*** ./src/forum/components/DiscussionSearchSource.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DiscussionSearchSource; });
+/* harmony import */ var flarum_helpers_highlight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/helpers/highlight */ "flarum/helpers/highlight");
+/* harmony import */ var flarum_helpers_highlight__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_helpers_highlight__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DiscussionSearchSource =
+/*#__PURE__*/
+function () {
+  function DiscussionSearchSource(onSelect, ignore) {
+    this.results = {};
+    this.onSelect = onSelect;
+    this.ignore = ignore;
+  }
+
+  var _proto = DiscussionSearchSource.prototype;
+
+  _proto.search = function search(query) {
+    var _this = this;
+
+    query = query.toLowerCase();
+    this.results[query] = [];
+    var params = {
+      filter: {
+        q: query
+      },
+      page: {
+        limit: 4
+      }
+    };
+    var id = Number(query);
+
+    if (!Number.isNaN(id) && id !== this.ignore) {
+      return app.store.find('discussions', id).then(function (d) {
+        _this.results[query] = [d];
+      }).catch(function () {
+        return [];
+      });
+    }
+
+    return app.store.find('discussions', params).then(function (results) {
+      _this.results[query] = results.filter(function (d) {
+        return d.id() !== _this.ignore;
+      });
+    });
+  };
+
+  _proto.view = function view(query) {
+    var _this2 = this;
+
+    query = query.toLowerCase();
+    var results = this.results[query] || [];
+    return [results.map(function (discussion) {
+      return m("li", {
+        className: "DiscussionSearchResult",
+        "data-index": 'discussions' + discussion.id()
+      }, m("a", {
+        onclick: function onclick() {
+          return _this2.onSelect(discussion);
+        }
+      }, m("div", {
+        className: "DiscussionSearchResult-title"
+      }, m("i", null, flarum_helpers_highlight__WEBPACK_IMPORTED_MODULE_0___default()(discussion.id(), query)), " ~ ", flarum_helpers_highlight__WEBPACK_IMPORTED_MODULE_0___default()(discussion.title(), query))));
+    })];
+  };
+
+  return DiscussionSearchSource;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/forum/index.js":
+/*!****************************!*\
+  !*** ./src/forum/index.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/extend */ "flarum/extend");
+/* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var flarum_Model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/Model */ "flarum/Model");
+/* harmony import */ var flarum_Model__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_Model__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_utils_DiscussionControls__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/utils/DiscussionControls */ "flarum/utils/DiscussionControls");
+/* harmony import */ var flarum_utils_DiscussionControls__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_utils_DiscussionControls__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/Button */ "flarum/components/Button");
+/* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_DiscussionMergeModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/DiscussionMergeModal */ "./src/forum/components/DiscussionMergeModal.js");
+/* harmony import */ var _components_DiscussionMergePost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/DiscussionMergePost */ "./src/forum/components/DiscussionMergePost.js");
+
+
+
+
+
+
+app.initializers.add('fof/merge-discussions', function () {
+  app.store.models.discussions.prototype.canMerge = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('canMerge');
+  app.postComponents.discussionMerged = _components_DiscussionMergePost__WEBPACK_IMPORTED_MODULE_5__["default"];
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_utils_DiscussionControls__WEBPACK_IMPORTED_MODULE_2___default.a, 'moderationControls', function (items, discussion) {
+    if (!discussion.canMerge()) return;
+    items.add('fof-merge', flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a.component({
+      icon: 'fas fa-code-branch fa-flip-vertical',
+      onclick: function onclick() {
+        return app.modal.show(_components_DiscussionMergeModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          discussion: discussion
+        });
+      }
+    }, app.translator.trans('fof-merge-discussions.forum.discussion.merge')));
+  });
+});
+
+/***/ }),
+
+/***/ "flarum/Model":
+/*!**********************************************!*\
+  !*** external "flarum.core.compat['Model']" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['Model'];
+
+/***/ }),
+
+/***/ "flarum/components/Button":
+/*!**********************************************************!*\
+  !*** external "flarum.core.compat['components/Button']" ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/Button'];
+
+/***/ }),
+
+/***/ "flarum/components/DiscussionPage":
+/*!******************************************************************!*\
+  !*** external "flarum.core.compat['components/DiscussionPage']" ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/DiscussionPage'];
+
+/***/ }),
+
+/***/ "flarum/components/EventPost":
+/*!*************************************************************!*\
+  !*** external "flarum.core.compat['components/EventPost']" ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/EventPost'];
+
+/***/ }),
+
+/***/ "flarum/components/Modal":
+/*!*********************************************************!*\
+  !*** external "flarum.core.compat['components/Modal']" ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/Modal'];
+
+/***/ }),
+
+/***/ "flarum/components/PostStream":
+/*!**************************************************************!*\
+  !*** external "flarum.core.compat['components/PostStream']" ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/PostStream'];
+
+/***/ }),
+
+/***/ "flarum/components/Search":
+/*!**********************************************************!*\
+  !*** external "flarum.core.compat['components/Search']" ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['components/Search'];
+
+/***/ }),
+
+/***/ "flarum/extend":
+/*!***********************************************!*\
+  !*** external "flarum.core.compat['extend']" ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['extend'];
+
+/***/ }),
+
+/***/ "flarum/helpers/highlight":
+/*!**********************************************************!*\
+  !*** external "flarum.core.compat['helpers/highlight']" ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['helpers/highlight'];
+
+/***/ }),
+
+/***/ "flarum/helpers/punctuateSeries":
+/*!****************************************************************!*\
+  !*** external "flarum.core.compat['helpers/punctuateSeries']" ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['helpers/punctuateSeries'];
+
+/***/ }),
+
+/***/ "flarum/states/GlobalSearchState":
+/*!*****************************************************************!*\
+  !*** external "flarum.core.compat['states/GlobalSearchState']" ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['states/GlobalSearchState'];
+
+/***/ }),
+
+/***/ "flarum/states/PostStreamState":
+/*!***************************************************************!*\
+  !*** external "flarum.core.compat['states/PostStreamState']" ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['states/PostStreamState'];
+
+/***/ }),
+
+/***/ "flarum/utils/DiscussionControls":
+/*!*****************************************************************!*\
+  !*** external "flarum.core.compat['utils/DiscussionControls']" ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['utils/DiscussionControls'];
+
+/***/ }),
+
+/***/ "flarum/utils/ItemList":
+/*!*******************************************************!*\
+  !*** external "flarum.core.compat['utils/ItemList']" ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['utils/ItemList'];
+
+/***/ }),
+
+/***/ "flarum/utils/Stream":
+/*!*****************************************************!*\
+  !*** external "flarum.core.compat['utils/Stream']" ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['utils/Stream'];
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=forum.js.map
